@@ -10,11 +10,12 @@ public class Passenger extends Human {
     }
 
     public Optional<Integer> getTicketNumber() {
-        return this.ticketNumber;
+        return ticketNumber;
     }
 
     @Override
     public void print() {
-        System.out.printf("Ticket number: %d", this.ticketNumber);
+//        System.out.printf("Ticket number: %d", this.ticketNumber);
+        ticketNumber.ifPresent(System.out::println);
     }
 }

@@ -5,28 +5,18 @@ import epam.OOP.task.Printable;
 import java.util.Optional;
 
 public class Human implements Printable {
-    private Optional<String> name;
-    private Optional<String> surname;
+    private Optional<String> numberOfID;
 
-    public void setSurname(String _surname) {
-        this.surname = Optional.ofNullable(_surname);
+    public void setNumberOfID(String _numberOfID) {
+        this.numberOfID = Optional.ofNullable(_numberOfID);
     }
 
-    public void setName(String _name) {
-        this.name = Optional.ofNullable(_name);
-    }
-
-    public Optional<String> getSurname() {
-        return this.surname;
-    }
-
-    public Optional<String> getName() {
-        return this.name;
+    public Optional<String> getNumberOfID() {
+        return this.numberOfID;
     }
 
     @Override
     public void print() {
-        System.out.printf("Surname is: %s\nName is: %s\n",
-                this.surname, this.name);
+        System.out.printf("Number of ID is: %s", this.numberOfID.get());
     }
 }

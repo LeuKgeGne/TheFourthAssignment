@@ -5,18 +5,18 @@ import epam.OOP.task.Printable;
 import java.util.Optional;
 
 public class Transport implements Printable {
-    private Optional<Integer> numberOfWay;
+    private Optional<Byte> numberOfWay;
 
-    public void setNumberOfWay(Integer _numberOfWay) {
+    public void setNumberOfWay(Byte _numberOfWay) {
         this.numberOfWay = Optional.ofNullable(_numberOfWay);
     }
 
-    public Optional<Integer> getNumberOfWay() {
+    public Optional<Byte> getNumberOfWay() {
         return this.numberOfWay;
     }
 
     @Override
     public void print() {
-        System.out.println("Number of way: %d" + this.numberOfWay);
+        System.out.println("Number of way: %d" + Optional.ofNullable(this.numberOfWay));
     }
 }
