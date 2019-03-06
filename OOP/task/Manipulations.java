@@ -1,8 +1,11 @@
 package epam.OOP.task;
 
 import epam.OOP.task.PassengerClasses.Passenger;
+import epam.OOP.task.SortClasses.Sorting;
 import epam.OOP.task.TransportClasses.RailCar;
 import epam.OOP.task.TransportClasses.Train;
+
+import java.util.ArrayList;
 
 public class Manipulations {
     public static void printInfromation(Train train) {
@@ -21,5 +24,15 @@ public class Manipulations {
                 System.out.println(passenger.getTicketNumber().get());
             }
         }
+    }
+
+    public static Train completePassengerSorting(Train train) {
+        RailCar railCar;
+        for(int i = 0; i < train.getAmountOfRailCars(); i++) {
+            railCar = train.getARailCarElement(i);
+
+            Sorting.sortPassengers(railCar.getPassengerList(), 0, railCar.getAmountOfPassengers());
+        }
+        return train;
     }
 }

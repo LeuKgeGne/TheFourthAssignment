@@ -20,4 +20,7 @@ public class Constants {
     protected static byte MAX_WAY_NUMBER = 11;
 
     protected static String TRAIN_IS_EMPTY = "We've got nothing";
+    protected static String JUSTMENU_I_ERROR = "Wrong input!(JustMenu)";
+
+    public static String CATCH_END = "Sort is completed!(JustMenu)";
 }

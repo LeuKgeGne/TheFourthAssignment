@@ -1,6 +1,7 @@
 package epam.OOP.task;
 
 import epam.OOP.task.PassengerClasses.Passenger;
+import epam.OOP.task.SortClasses.Sorting;
 import epam.OOP.task.TransportClasses.RailCar;
 import epam.OOP.task.TransportClasses.Train;
 
@@ -11,12 +12,11 @@ public class Runner {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-       /* byte changer = -1;*/
         Train train = null;
         boolean process = true;
 
         while(process) {
-            switch (JustMenu.variants(/*changer*/scanner)) {
+            switch (JustMenu.variants(scanner)) {
                 case 1: {
                     train = MyTinyTrainFactory.createTheTrain();
                 } break;
@@ -28,11 +28,18 @@ public class Runner {
                         System.out.println(Constants.TRAIN_IS_EMPTY);
                     }
                 } break;
+                case 3: {
+                    if(train != null) {
+                        train = Manipulations.completePassengerSorting(train);
+                    }
+                    else {
+                        System.out.println(Constants.TRAIN_IS_EMPTY);
+                    }
+                } break;
                 case 0: {
                     process = false;
                 } break;
             }
-            /*Runtime.getRuntime().exec("cls");*/
         }
         scanner.close();
 

@@ -22,6 +22,10 @@ public class RailCar implements Printable {
         return (byte)passengerList.size();
     }
 
+    public ArrayList<Passenger> getPassengerList() {
+        return passengerList;
+    }
+
     @Override
     public void print() {
         System.out.printf("Amount of passengers: %d", this.passengerList.size());
