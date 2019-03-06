@@ -17,6 +17,7 @@ public class Human implements Printable {
 
     @Override
     public void print() {
-        System.out.printf("Number of ID is: %s", this.numberOfID.get());
+        /*System.out.printf("Number of ID is: %s", this.numberOfID.get());*/
+        this.numberOfID.ifPresent(System.out::println);
     }
 }

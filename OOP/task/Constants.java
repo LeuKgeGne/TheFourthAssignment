@@ -18,4 +18,6 @@ public class Constants {
 
     protected static byte MIN_WAY_NUMBER = 1;
     protected static byte MAX_WAY_NUMBER = 11;
+
+    protected static String TRAIN_IS_EMPTY = "We've got nothing";
 }

@@ -3,11 +3,12 @@ package epam.OOP.task.TransportClasses;
 import epam.OOP.task.PassengerClasses.Passenger;
 import epam.OOP.task.Printable;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class RailCar implements Printable {
-    private List<Passenger> passengerList;
+    private ArrayList<Passenger> passengerList = new ArrayList<Passenger>();
 
     public void setAPassengerToList(Passenger _passenger) {
         passengerList.add(_passenger);
@@ -15,6 +16,10 @@ public class RailCar implements Printable {
 
     public Passenger getAPassengerFromList(Integer _IndexOfAPassenger) {
         return passengerList.get(_IndexOfAPassenger);
+    }
+
+    public byte getAmountOfPassengers() {
+        return (byte)passengerList.size();
     }
 
     @Override
