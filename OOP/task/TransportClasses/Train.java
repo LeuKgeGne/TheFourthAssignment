@@ -10,6 +10,14 @@ public class Train extends Transport{
         this.railCarList.add(_railCar);
     }
 
+    public void setRailCarList(ArrayList<RailCar> _railCarList) {
+        this.railCarList = _railCarList;
+    }
+
+    public void setARailCarElementByIndex(int index, RailCar _railCar) {
+        this.railCarList.add(index, _railCar);
+    }
+
     public RailCar getARailCarElement(Integer _IndexOfACar) {
         return this.railCarList.get(_IndexOfACar);
     }

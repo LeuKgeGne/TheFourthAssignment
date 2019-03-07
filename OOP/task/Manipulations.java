@@ -31,8 +31,9 @@ public class Manipulations {
         for(int i = 0; i < train.getAmountOfRailCars(); i++) {
             railCar = train.getARailCarElement(i);
 
-            Sorting.sortPassengers(railCar.getPassengerList(), 0, railCar.getAmountOfPassengers());
+            train.setARailCarElementByIndex(i, Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1));
         }
+
         return train;
     }
 }
