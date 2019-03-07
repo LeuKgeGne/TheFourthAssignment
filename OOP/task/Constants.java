@@ -20,10 +20,10 @@ public class Constants {
     protected static final byte MAX_WAY_NUMBER = 11;
 
     protected static final String TRAIN_IS_EMPTY = "We've got nothing";
-    protected static final String JUSTMENU_I_ERROR = "Wrong input!(JustMenu)";
+    protected static final String JUSTMENU_I_ERROR = "Wrong input!(JustMenu.java)";
 
-    public static final String CATCH_END = "Sort is completed!(JustMenu)";
-    protected static final String CREAT_TEXT = "Created a train.";
+    public static final String CATCH_END = "Sort is completed!(Sorting.java)";
+    protected static final String CREAT_TEXT = "\nCreated a train.";
     protected static final String PRINT_TEXT = "Printed the train.";
     protected static final String PRINT_E_TEXT = "Tried to print an empty list.";
     protected static final String SORT_TEXT = "Sorted the list with passengers.";

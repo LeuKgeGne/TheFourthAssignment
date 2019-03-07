@@ -37,10 +37,10 @@ public class Sorting {
                 }
                 if(flag && first.hasNext() && comparing.hasNext()) {
                     passenger = first.next();
-                    /*first = railCar.getPassengerList().listIterator(first.previousIndex());*/
+                    first = railCar.getPassengerList().listIterator(first.previousIndex());
                     first.previous();
                     first.set(comparing.next());
-                    /*comparing = railCar.getPassengerList().listIterator(comparing.previousIndex());*/
+                    comparing = railCar.getPassengerList().listIterator(comparing.previousIndex());
                     comparing.previous();
                     comparing.set(passenger);
                 }
