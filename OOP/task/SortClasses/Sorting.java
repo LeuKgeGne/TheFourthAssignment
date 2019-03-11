@@ -16,7 +16,7 @@ public class Sorting {
         myList.sort(comparingByTicket);
     }
 
-    public static RailCar sortPassengers(RailCar railCar, /*ArrayList<Passenger> objectsList,*/ int first_index, int second_index) {
+    public static void sortPassengers(RailCar railCar, int first_index, int second_index) {
         ListIterator<Passenger> first = railCar.getPassengerList().listIterator(first_index);
         ListIterator<Passenger> second  = railCar.getPassengerList().listIterator(first_index);
         ListIterator<Passenger> comparing = null;
@@ -56,6 +56,5 @@ public class Sorting {
         } catch (NoSuchElementException ex) {
             System.out.println(Constants.CATCH_END);
         }
-        return railCar;
     }
 }

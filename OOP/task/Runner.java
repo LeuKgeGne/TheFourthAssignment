@@ -22,10 +22,6 @@ public class Runner {
                     logger.info(Constants.CREAT_TEXT);
                 } break;
                 case 2: {
-                    train = MyTinyTrainFactory.createTheTrain();
-                    logger.info(Constants.CREAT_TEXT);
-                } break;
-                case 3: {
                     if(train != null) {
                         Manipulations.printInfromation(train);
                         logger.info(Constants.PRINT_TEXT);
@@ -35,9 +31,9 @@ public class Runner {
                         logger.warning(Constants.PRINT_E_TEXT);
                     }
                 } break;
-                case 4: {
+                case 3: {
                     if(train != null) {
-                        train = Manipulations.completePassengerSorting(train);
+                        Manipulations.completePassengerSorting(train);
                         logger.info(Constants.SORT_TEXT);
                         ;
                     }
@@ -45,9 +41,6 @@ public class Runner {
                         System.out.println(Constants.TRAIN_IS_EMPTY);
                         logger.info(Constants.SORT_E_TEXT);
                     }
-                } break;
-                case 5: {
-
                 } break;
                 case 0: {
                     process = false;

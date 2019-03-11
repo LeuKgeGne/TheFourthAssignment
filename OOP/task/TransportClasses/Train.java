@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Train extends Transport{
+public class Train extends Transport {
     private ArrayList<RailCar> railCarList = new ArrayList();
 
     public void setARailCarElement(RailCar _railCar) {
