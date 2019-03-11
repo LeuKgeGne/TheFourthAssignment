@@ -15,6 +15,7 @@ public class Passenger extends Human {
 
     @Override
     public void print() {
+        super.print();
         ticketNumber.ifPresent(System.out::println);
     }
 }

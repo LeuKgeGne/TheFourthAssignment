@@ -30,8 +30,9 @@ public class Manipulations {
         RailCar railCar;
         for(int i = 0; i < train.getAmountOfRailCars(); i++) {
             railCar = train.getARailCarElement(i);
-
-            train.setARailCarElementByIndex(i, Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1));
+            Sorting.sortByTicket(railCar.getPassengerList());
+            /*train.setARailCarElementByIndex(i, Sorting.sortPassengers(railCar, Constants.FIRST_INDEX, railCar.getAmountOfPassengers() - 1));*/
+            train.setARailCarElementByIndex(i, railCar);
         }
 
         return train;

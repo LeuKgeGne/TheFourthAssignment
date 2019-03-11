@@ -5,10 +5,17 @@ import epam.OOP.task.PassengerClasses.Passenger;
 import epam.OOP.task.TransportClasses.RailCar;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
 public class Sorting {
+    public static Comparator<Passenger> comparingByTicket = (pas1, pas2) -> pas1.getTicketNumber().get().compareTo(pas2.getTicketNumber().get());
+
+    public static void sortByTicket(ArrayList<Passenger> myList) {
+        myList.sort(comparingByTicket);
+    }
+
     public static RailCar sortPassengers(RailCar railCar, /*ArrayList<Passenger> objectsList,*/ int first_index, int second_index) {
         ListIterator<Passenger> first = railCar.getPassengerList().listIterator(first_index);
         ListIterator<Passenger> second  = railCar.getPassengerList().listIterator(first_index);
@@ -37,10 +44,10 @@ public class Sorting {
                 }
                 if(flag && first.hasNext() && comparing.hasNext()) {
                     passenger = first.next();
-                    first = railCar.getPassengerList().listIterator(first.previousIndex());
+                    //first = railCar.getPassengerList().listIterator(first.previousIndex());
                     first.previous();
                     first.set(comparing.next());
-                    comparing = railCar.getPassengerList().listIterator(comparing.previousIndex());
+                   // comparing = railCar.getPassengerList().listIterator(comparing.previousIndex());
                     comparing.previous();
                     comparing.set(passenger);
                 }

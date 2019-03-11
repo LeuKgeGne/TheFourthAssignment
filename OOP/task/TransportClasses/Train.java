@@ -14,6 +14,10 @@ public class Train extends Transport{
         this.railCarList = _railCarList;
     }
 
+    public ArrayList<RailCar>  getTheRailCarList() {
+        return railCarList;
+    }
+
     public void setARailCarElementByIndex(int index, RailCar _railCar) {
         this.railCarList.add(index, _railCar);
     }
@@ -28,6 +32,15 @@ public class Train extends Transport{
 
     @Override
     public void print() {
+        System.out.println("Number of way is: " + super.getNumberOfWay());
         System.out.printf("Amount of rail cars: %d\n", this.railCarList.size());
+        int i = 0, j = 0;
+        while(i < this.railCarList.size()) {
+            while(j < railCarList.get(i).getAmountOfPassengers()) {
+                railCarList.get(i).getAPassengerFromList(j).print();
+                ++j;
+            }
+            ++i;
+        }
     }
 }

@@ -8,7 +8,8 @@ public class JustMenu {
         int changer = -1;
         try {
             System.out.println("=========================");
-            System.out.println("1. Create a train.");
+            System.out.println("1. Create a train(random).");
+            System.out.println("1. Create a train(by hands).");
             System.out.println("2. Print piece of Info.");
             System.out.println("3. Sort passengers.");
             System.out.println("0. End program.");

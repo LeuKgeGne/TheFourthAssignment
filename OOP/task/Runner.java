@@ -1,5 +1,6 @@
 package epam.OOP.task;
 
+import epam.OOP.task.SortClasses.Sorting;
 import epam.OOP.task.TransportClasses.Train;
 import java.io.IOException;
 import java.util.Scanner;
@@ -13,7 +14,6 @@ public class Runner {
         Scanner scanner = new Scanner(System.in);
         Train train = null;
         boolean process = true;
-        System.out.println(System.getProperty("java.util.Logging.config.files"));
 
         while(process) {
             switch (JustMenu.variants(scanner)) {
@@ -22,6 +22,10 @@ public class Runner {
                     logger.info(Constants.CREAT_TEXT);
                 } break;
                 case 2: {
+                    train = MyTinyTrainFactory.createTheTrain();
+                    logger.info(Constants.CREAT_TEXT);
+                } break;
+                case 3: {
                     if(train != null) {
                         Manipulations.printInfromation(train);
                         logger.info(Constants.PRINT_TEXT);
@@ -31,15 +35,19 @@ public class Runner {
                         logger.warning(Constants.PRINT_E_TEXT);
                     }
                 } break;
-                case 3: {
+                case 4: {
                     if(train != null) {
                         train = Manipulations.completePassengerSorting(train);
                         logger.info(Constants.SORT_TEXT);
+                        ;
                     }
                     else {
                         System.out.println(Constants.TRAIN_IS_EMPTY);
                         logger.info(Constants.SORT_E_TEXT);
                     }
+                } break;
+                case 5: {
+
                 } break;
                 case 0: {
                     process = false;
